@@ -16,8 +16,6 @@ function init(){
             await sleep(speed);
             i=(i+1)|0;
         }
-        sleep(60000);
-        location.href=location.href;
     })();
 }
 
