@@ -1,12 +1,18 @@
 @media screen and (orientation: portrait) {
-  :root{
-    --font-size: 5vw;
-  }
+    :root{
+        --font-size: 5vw;
+    }
+    body{
+        padding: 30vw 5vw 20vw 5vw;
+    }
 }
 @media screen and (orientation: landscape) {
-  :root{
-    --font-size: 2vw;
-  }
+    :root{
+        --font-size: 2vw;
+    }
+    body{
+        padding: 5vw;
+    }
 }
 
 
@@ -28,7 +34,6 @@ body{
     font-family: 'PT Serif', 'MyFont';
     overflow-x: hidden;
     width: 90vw;
-    padding: 5vw;
 }
 #moji{
     /* text-align: center; */
