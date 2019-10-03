@@ -1,17 +1,13 @@
 @media screen and (orientation: portrait) {
-    :root{
-        --font-size: 5vw;
-    }
     body{
         padding: 30vw 5vw 20vw 5vw;
+        font-size: 5vw;
     }
 }
 @media screen and (orientation: landscape) {
-    :root{
-        --font-size: 2vw;
-    }
     body{
         padding: 5vw;
+        font-size: 2vw;
     }
 }
 
@@ -21,24 +17,15 @@
     font-family: 'MyFont';
     src: url(./logotypejp_mp_b_1.1.ttf);
 }
-html{
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    -webkit-text-size-adjust: none;
-}
-
 body{
     background: black;
+    -webkit-text-size-adjust: none;
     font-family: 'PT Serif', 'MyFont';
     overflow-x: hidden;
     width: 90vw;
 }
-#moji{
-    /* text-align: center; */
-    font-size: var(--font-size);
-    word-wrap: normal;
+.moji{
+    /* word-wrap: normal; */
     color: white;
     width: 90vw;
     color: rgba(0,0,0,0);
