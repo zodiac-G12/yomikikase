@@ -33,3 +33,13 @@ body{
     -webkit-background-clip: text;
     background-clip: text;
 }
+#\0031, #\0032{
+    text-align: center;
+}
+#\0031{
+    font-size: 120%;
+}
+#\0032{
+    font-size: 110%;
+    margin-bottom: 5vw;
+}

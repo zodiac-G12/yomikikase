@@ -14,6 +14,7 @@ function init(){
         while(i<content.length&&!stopper){
             while(j<content[i].length&&!stopper){
                 document.getElementById(i).innerHTML = content[i].slice(0,j+1);
+                // document.getElementById(i).insertAdjacentHTML("beforeend",content[i][j]);
                 document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight;
                 await sleep(speed);
                 j=(j+1)|0;
