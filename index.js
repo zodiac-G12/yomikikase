@@ -1,5 +1,5 @@
 const sleep = (n) => new Promise(resolve => setTimeout(resolve, n));
-var i = 0;
+var i = 0, j = 0;
 var stopper = false;
 const speed = parseInt(location.href.split("#")[1]) || 100;
 
@@ -8,13 +8,24 @@ function stop(){
     init();
 }
 
+
 function init(){
     (async()=>{
         while(i<content.length&&!stopper){
-            document.getElementById("moji").innerHTML = content.slice(0,i+1);
-            document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight;
-            await sleep(speed);
-            i=(i+1)|0;
+            while(j<content[i].length&&!stopper){
+                document.getElementById(i).innerHTML = content[i].slice(0,j+1);
+                document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight;
+                await sleep(speed);
+                j=(j+1)|0;
+            }
+            if(!stopper){
+                i=(i+1)|0;
+                j=0;
+                var div = document.createElement("div");
+                div.setAttribute("id", String(i));
+                div.setAttribute("class", "moji");
+                document.body.insertBefore(div,document.getElementById(String(i-1)).nextSibling);
+            }
         }
     })();
 }
